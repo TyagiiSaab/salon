@@ -125,4 +125,19 @@
     requestAnimationFrame(tick);
   }), { threshold: 0.5 });
   $$("[data-count]").forEach((el) => cio.observe(el));
+  /* theme toggle — persisted, OS-aware (default set pre-paint in <head>) */
+  const tt = $("#themeToggle");
+  const paintToggle = () => {
+    if (!tt) return;
+    const dark = document.documentElement.dataset.theme === "dark";
+    tt.querySelector("span").textContent = dark ? "☀" : "◐";
+    tt.querySelector("em").textContent = dark ? "Light" : "Dark";
+  };
+  if (tt) tt.onclick = () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("veloura-theme", next); } catch (e) {}
+    paintToggle();
+  };
+  paintToggle();
 })();

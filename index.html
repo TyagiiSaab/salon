@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
+<script>
+try{var _t=localStorage.getItem('veloura-theme');if(!_t){_t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=_t}catch(e){document.documentElement.dataset.theme='light'}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>✦</text></svg>" />
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -29,6 +32,7 @@
       <a href="#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Dark / light"><span>◐</span><em>Dark</em></button>
       <a class="nav-phone" href="tel:+919896012345">✆ +91 98960 12345</a>
       <a class="nav-book" href="#booking">Book Appointment</a>
       <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>

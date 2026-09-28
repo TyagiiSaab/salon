@@ -297,8 +297,42 @@ footer{background:var(--ink);color:var(--bone);padding:70px 0 34px;overflow:hidd
 .js .rv{opacity:0;transform:translateY(30px);transition:.9s cubic-bezier(.16,.8,.24,1)}
 .js .rv.in{opacity:1;transform:none}
 
+/* ── theme toggle ── */
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;font-family:var(--sans);font-size:11px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;color:var(--ink);transition:.3s}
+.theme-toggle:hover{border-color:var(--plum);color:var(--plum)}
+.theme-toggle span{font-size:15px;line-height:1}
+.theme-toggle em{font-style:normal}
+
+/* ── dark mode ── */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --bone:#141110; --cream:#181412; --card:#201B17;
+  --ink:#F2EBE0; --soft:#B8AFA2;
+  --plum:#A5718A;
+  --line:rgba(242,235,224,.15);
+}
+/* keep these dark in both modes for rhythm */
+html[data-theme="dark"] .dark{background:#0B0908}
+html[data-theme="dark"] footer{background:#0B0908;color:#F2EBE0}
+html[data-theme="dark"] .foot-giant{color:transparent;-webkit-text-stroke:1px rgba(242,235,224,.25)}
+html[data-theme="dark"] .mmenu{background:#141210;color:#F2EBE0}
+/* cards that would lose contrast */
+html[data-theme="dark"] .tcard{background:#1B1713;border-color:rgba(242,235,224,.14)}
+html[data-theme="dark"] .tprice{background:rgba(20,17,16,.85);color:#F2EBE0}
+html[data-theme="dark"] .book-form{background:#1E1A16;border:1px solid rgba(242,235,224,.14)}
+html[data-theme="dark"] .book-form select,html[data-theme="dark"] .book-form input{background:#141110;border-color:rgba(242,235,224,.2);color:#F2EBE0}
+html[data-theme="dark"] .rev-strip button:hover,html[data-theme="dark"] .rev-strip button.active{background:#26211C}
+html[data-theme="dark"] .svc-row:hover{background:#1E1A16}
+html[data-theme="dark"] .checks li:hover{background:#1E1A16}
+html[data-theme="dark"] .art .ig{background:rgba(20,17,16,.9);color:#F2EBE0}
+html[data-theme="dark"] .hm-main figcaption{background:rgba(20,17,16,.9);color:#F2EBE0}
+html[data-theme="dark"] .hero::after{-webkit-text-stroke:1px rgba(242,235,224,.09)}
+html[data-theme="dark"] .float-img{box-shadow:0 30px 60px -15px rgba(0,0,0,.8)}
+
 @media(max-width:1020px){
   .nav-links,.nav-phone{display:none}.burger{display:flex}
+  .theme-toggle em{display:none}
+  .theme-toggle{padding:9px 12px}
   .hero-grid,.about-grid,.book-grid,.visit-grid{grid-template-columns:1fr}
   .hero-media{min-height:480px}
   .hm-main{inset:0}
