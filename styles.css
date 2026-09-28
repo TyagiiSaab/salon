@@ -191,6 +191,8 @@ h2 em{font-style:italic;font-weight:300;color:var(--plum)}
 .pack-card a{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;border-bottom:1.5px solid var(--taupe);padding-bottom:4px;color:var(--taupe)}
 .pack-card.alt{background:var(--plum)}
 .pack-card.alt a{color:#fff;border-color:#fff}
+.pack-card .eyebrow{color:var(--taupe)}
+.pack-card .eyebrow::before{background:var(--taupe)}
 
 /* stylists */
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -312,7 +314,7 @@ html[data-theme="dark"]{
   --line:rgba(242,235,224,.15);
 }
 /* keep these dark in both modes for rhythm */
-html[data-theme="dark"] .dark{background:#0B0908}
+html[data-theme="dark"] .dark{background:#0B0908;color:#F2EBE0}
 html[data-theme="dark"] footer{background:#0B0908;color:#F2EBE0}
 html[data-theme="dark"] .foot-giant{color:transparent;-webkit-text-stroke:1px rgba(242,235,224,.25)}
 html[data-theme="dark"] .mmenu{background:#141210;color:#F2EBE0}
@@ -328,6 +330,13 @@ html[data-theme="dark"] .art .ig{background:rgba(20,17,16,.9);color:#F2EBE0}
 html[data-theme="dark"] .hm-main figcaption{background:rgba(20,17,16,.9);color:#F2EBE0}
 html[data-theme="dark"] .hero::after{-webkit-text-stroke:1px rgba(242,235,224,.09)}
 html[data-theme="dark"] .float-img{box-shadow:0 30px 60px -15px rgba(0,0,0,.8)}
+/* dark-mode contrast repairs */
+html[data-theme="dark"] .pack-card{background:#0D0B09;color:#F2EBE0}
+html[data-theme="dark"] .pack-card.alt{background:#3E2733;color:#fff}
+html[data-theme="dark"] .mclose{color:#F2EBE0;border-color:rgba(242,235,224,.35)}
+html[data-theme="dark"] .rev-ctrl button{color:#141110;border-color:rgba(20,17,16,.3)}
+html[data-theme="dark"] .chans a:hover{background:#F2EBE0;color:#141110}
+html[data-theme="dark"] .menu-note .btn-dark{background:#F2EBE0;color:#141110;border-color:#F2EBE0}
 
 @media(max-width:1020px){
   .nav-links,.nav-phone{display:none}.burger{display:flex}
